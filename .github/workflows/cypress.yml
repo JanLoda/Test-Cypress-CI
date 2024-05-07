@@ -25,6 +25,8 @@ jobs:
       - uses: browser-actions/setup-chrome@v1
       - name: Run Cypress tests
         run: npx cypress run --browser chrome
+      - name: Generate Raport
+        run: npx allure generate --single-file
   
   firefox-test:
     runs-on: ubuntu-latest
